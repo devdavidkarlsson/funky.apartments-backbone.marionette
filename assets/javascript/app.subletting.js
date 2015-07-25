@@ -9,6 +9,12 @@ MyApp.Subletting = function(){
 
   var Appartments = Backbone.Collection.extend({
     model: Appartment,
+    initializeData: function(){
+      var self = this;
+      var callback = function (data){console.log(data); self.reset(data)};
+      S.Appartments.fetch(callback);
+
+    },
     fetch: function(callback){
       var result = [{name: "14D"},{name: "14E"}];
       callback(result);
@@ -20,8 +26,7 @@ MyApp.Subletting = function(){
   S.Appartments = new Appartments();
 
   MyApp.addInitializer(function(){
-    var testCallback = function (data){console.log(data);}
-    S.Appartments.fetch(testCallback);
+    S.Appartments.initializeData();
   });
 
   return S;
