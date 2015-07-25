@@ -7,18 +7,18 @@ MyApp.About.DefaultView = Backbone.Marionette.ItemView.extend({
 
 MyApp.About.Router = Backbone.Marionette.AppRouter.extend({
   appRoutes: {
-    "about": "about"
+    "about": "renderAbout"
   }
 });
 
-MyApp.About.about = function(){
+MyApp.About.renderAbout = function(){
   var aboutView = new MyApp.About.DefaultView();
   MyApp.content.show(aboutView);
   Backbone.history.navigate("about");
 }
 
 
-//Instatiation happens in the add Initializer
+//Instantiation happens in the add Initializer
 
 MyApp.addInitializer(function(){
   MyApp.About.router = new MyApp.About.Router({
