@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Appartments</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-modal.css">
+    <link href="http://fonts.googleapis.com/css?family=Sofia" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1 class="title">Funky Appartments</h1>
+
+<div id="content"></div>
+
+<!-- templates -->
+<script type="text/template" id="about-template">
+    <p>That's all about it, folks.</p>
+</script>
+
+<!-- Thirt-Party Libraries (Order matters) -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+<script src="./assets/javascript/vendor/underscore.js"></script>
+<script src="./assets/javascript/vendor/backbone.js"></script>
+<script src="./assets/javascript/vendor/backbone.marionette.js"></script>
+
+<!-- Application core (Order matters) -->
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+<script type="text/javascript" src="assets/javascript/app.about.js"></script>
+<!--script type="text/javascript" src="assets/javascript/app.library_app.js"></script>
+<script type="text/javascript" src="assets/javascript/app.library_app.book_list.js"></script-->
+
+<script type="text/javascript">
+    MyApp.start();
+</script>
+</body>
+</html>
