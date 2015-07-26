@@ -26,7 +26,9 @@ MyApp.Subletting = function(){
   S.Appartments = new Appartments();
 
   MyApp.addInitializer(function(){
+    MyApp.Subletting.initializeLayout();
     S.Appartments.initializeData();
+    MyApp.Subletting.AppartmentsList.showAppartments(S.Appartments);
   });
 
   return S;

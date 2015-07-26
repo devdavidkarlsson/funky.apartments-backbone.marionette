@@ -24,7 +24,7 @@ html, body {
   }
 
 #content {
-  margin-top: -4em;
+  margin-top: 1em;
   }
   #content .about {
     color: #fff;
@@ -39,9 +39,9 @@ html, body {
 #searchBar {
   width: 770px;
   height: 44px;
-  background: url(../images/bgSearch.png);
+  background-color: burlywood;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 30px;
   border-radius: 5px 5px 0 0;
   box-shadow: 0 0 20px rgba(0,0,0,1);
   -webkit-box-shadow: 0 0 20px rgba(0,0,0,1);
@@ -75,7 +75,7 @@ html, body {
     background: rgba(250,250,250,0.3);
     }
 
-#bookList {
+#appartmentList {
   width: 762px;
   height: 573px;
   position: relative;
@@ -101,7 +101,7 @@ html, body {
   background: url(../images/rightBar.png);
 }
 
-.books {
+.appartments {
   width: 700px;
   display: table-cell;
   background: url(../images/bgLibrary.png);
@@ -117,7 +117,7 @@ html, body {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 
-.book {
+.appartment {
   /*-webkit-transition: all 0.2s ease-in-out;*/
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -133,6 +133,31 @@ html, body {
     cursor: pointer;
     background: white;
 }
+
+
+
+
+.appartment-img-text {
+    position: relative;
+    width: 100px; /* for IE 6 */
+}
+
+.appartment-img-text p {
+    position: absolute;
+    top: 3px;
+    left: -105px;
+    width: 100%;
+}
+.appartment-img-text .bg{
+      background-color: rgba(0,0,0,0.5);
+      color: #ffffff;
+}
+
+.appartment-img-text .bg .spacer{
+    padding: 0 2px;
+    background: none;
+}
+
 
 .book:hover {
 	box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
