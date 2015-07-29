@@ -33,8 +33,9 @@
 
 <script type="text/template" id="appartment-template">
     <span class="appartment-img-text">
-        <img src="http://placehold.it/100x150" alt="" class="appartment" />
+        <img src="<%=url%>" alt="" class="appartment" />
         <p>
+
             <span class="bg">
                 <span class="spacer">&nbsp;</span><%=name%><span class="spacer">&nbsp;</span>
             </span>
@@ -43,11 +44,13 @@
 </script>
 
 <!-- Thirt-Party Libraries (Order matters) -->
+<script src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
 <script src="./assets/javascript/vendor/underscore.js"></script>
 <script src="./assets/javascript/vendor/backbone.js"></script>
 <script src="./assets/javascript/vendor/backbone.marionette.js"></script>
+
 
 <!-- Application core (Order matters) -->
 <script type="text/javascript" src="assets/javascript/app.js"></script>
