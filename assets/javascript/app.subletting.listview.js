@@ -1,8 +1,28 @@
 MyApp.Subletting.AppartmentsList = function(){
   var AL = {};
 
+  var AppartmentDetailView = Backbone.Marionette.ItemView.extend({
+    template: "#appartment-detail-template",
+    className: "appartmentDetail",
+    events:{
+      'click .close': 'hideDetails'
+    },
+    hideDetails: function(){
+      AL.showAppartments(MyApp.Subletting.Appartments);
+    }
+  });
+
   var AppartmentView = Backbone.Marionette.ItemView.extend({
-    template: "#appartment-template"
+    template: "#appartment-template",
+
+    events: {
+      'click': 'showDetails'
+    },
+
+    showDetails: function(){
+      var detailView = new AppartmentDetailView({model: this.model});
+      MyApp.Subletting.layout.details.show(detailView);
+    }
   });
 
   var AppartmentListView = Backbone.Marionette.CompositeView.extend({

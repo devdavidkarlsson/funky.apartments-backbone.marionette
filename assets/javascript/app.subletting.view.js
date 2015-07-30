@@ -5,7 +5,8 @@ MyApp.Subletting.initializeLayout = function(){
 
     regions: {
       search: "#searchBar",
-      appartments: "#appartmentContainer"
+      appartments: "#appartmentContainer",
+      details: "#appartmentContainer"
     }
   });
 
