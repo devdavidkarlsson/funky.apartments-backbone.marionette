@@ -7,6 +7,10 @@ MyApp.Subletting.AppartmentsList = function(){
     events:{
       'click .close': 'hideDetails'
     },
+    initialize: function(){
+      var self = this;
+      MyApp.vent.on("search:param", function(){self.hideDetails(); });
+    },
     hideDetails: function(){
       AL.showAppartments(MyApp.Subletting.Appartments);
     }
