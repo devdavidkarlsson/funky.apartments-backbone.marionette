@@ -131,6 +131,8 @@ html, body {
     -webkit-box-shadow: 0px 4px 5px rgba(0,0,0,0.4);
     cursor: pointer;
     background: white;
+    border-radius: 5px;
+
 }
 
 
@@ -177,6 +179,15 @@ html, body {
     box-shadow: 0 0 20px rgba(0,0,0,1);
     -webkit-box-shadow: 0 0 20px rgba(0,0,0,1);
     -moz-box-shadow: 0 0 20px rgba(0,0,0,1);
+    border-radius: 0 0 10px 10px;
+}
+
+.appartmentDetail label {
+        /* Other styling.. */
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
 }
 
 .appartmentDetail .close{
@@ -187,6 +198,24 @@ html, body {
 .appartmentDetail .close:hover{
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
+}
+
+.appartmentDetail .close:active{
+    transform: rotate(-10deg);
+}
+
+.appartmentDetail .store{
+   float: right;
+    cursor: pointer;
+}
+
+.appartmentDetail .store:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+}
+
+.appartmentDetail .store:active{
+    transform: rotate(10deg);
 }
 
 .appartmentDetail::-webkit-scrollbar-corner{
@@ -213,11 +242,37 @@ html, body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 5px;
+    border-radius: 5px;
 }
 
 .appartmentDetail .descAppartment{
     padding: 20px;
+    padding-bottom: 100px;
+    padding-bottom: 100px;
+
 }
+
+.appartmentDetail .descAppartment input{
+    width: 80%;
+    display: block;
+    margin-top: 4px;
+    margin-left: 70px;
+    margin-right: auto;
+}
+
+.appartmentDetail .descAppartment textarea{
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.appartmentDetail img{
+    margin: 10px;
+}
+
 .appartmentDetail h1 {
 	color: rgb(40,40,40);
 	margin: 0;

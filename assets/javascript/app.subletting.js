@@ -16,17 +16,16 @@ MyApp.Subletting = function(){
 
     initialize: function(){
       var self= this;
-      MyApp.vent.on("search:param", function(param){self.search(param); });
+      MyApp.vent.on('search:param', function(param){self.search(param); });
     },
 
     initializeData: function(){
-      //this.query = new Parse.Query(Appartment);
-      this.fetch({success: function(){MyApp.vent.trigger("search:complete");}});
+      this.fetch({success: function(){MyApp.vent.trigger('search:complete');}});
     },
     search: function(param){
       this.query.contains('name', param);
       //show spinner
-      MyApp.vent.trigger("search:begin");
+      MyApp.vent.trigger('search:begin');
 
 
       var self = this;
@@ -34,7 +33,7 @@ MyApp.Subletting = function(){
         success: function(results) {
           self.reset(results)
           // hide spinner
-          MyApp.vent.trigger("search:complete");
+          MyApp.vent.trigger('search:complete');
 
         },
 
