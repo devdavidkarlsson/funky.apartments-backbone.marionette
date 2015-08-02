@@ -1,4 +1,4 @@
-# funky.appartments-backbone.marionette
+# funky.apartments-backbone.marionette
 Tutorial
 
 Heavily inspired by: 
