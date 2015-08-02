@@ -7,12 +7,12 @@ MyApp.Subletting = function(){
 
   }
 
-  var Appartment = Parse.Object.extend('Appartment');
+  var Apartment = Parse.Object.extend('Appartment');
 
-  var Appartments = Parse.Collection.extend({
-    model: Appartment,
+  var Apartments = Parse.Collection.extend({
+    model: Apartment,
 
-    query: new Parse.Query(Appartment),
+    query: new Parse.Query(Apartment),
 
     initialize: function(){
       var self= this;
@@ -46,12 +46,12 @@ MyApp.Subletting = function(){
 
   });
 
-  S.Appartments = new Appartments();
+  S.Apartments = new Apartments();
 
   MyApp.addInitializer(function(){
     MyApp.Subletting.initializeLayout();
-    S.Appartments.initializeData();
-    MyApp.Subletting.AppartmentsList.showAppartments(S.Appartments);
+    S.Apartments.initializeData();
+    MyApp.Subletting.ApartmentsList.showApartments(S.Apartments);
   });
 
   return S;

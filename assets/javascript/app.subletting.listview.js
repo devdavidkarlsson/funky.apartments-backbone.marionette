@@ -1,12 +1,12 @@
-MyApp.Subletting.AppartmentsList = function(){
+MyApp.Subletting.ApartmentsList = function(){
   var AL = {};
 
-  var AppartmentDetailView = Backbone.Marionette.ItemView.extend({
-    template: "#appartment-detail-template",
-    className: "appartmentDetail",
+  var ApartmentDetailView = Backbone.Marionette.ItemView.extend({
+    template: "#apartment-detail-template",
+    className: "apartmentDetail",
     events:{
       'click .close': 'hideDetails',
-      'click .descAppartment': 'editDetails'
+      'click .descApartment': 'editDetails'
     },
 
     initialize: function(){
@@ -14,17 +14,17 @@ MyApp.Subletting.AppartmentsList = function(){
       MyApp.vent.on("search:param", function(){self.hideDetails(); });
     },
     editDetails: function(){
-      var editView = new AppartmentEditView({model: this.model});
+      var editView = new ApartmentEditView({model: this.model});
       MyApp.Subletting.layout.details.show(editView);
     },
     hideDetails: function(){
-      AL.showAppartments(MyApp.Subletting.Appartments);
+      AL.showApartments(MyApp.Subletting.Apartments);
     }
   });
 
-  var AppartmentEditView = Backbone.Marionette.ItemView.extend({
-    template: "#appartment-edit-template",
-    className: "appartmentDetail",
+  var ApartmentEditView = Backbone.Marionette.ItemView.extend({
+    template: "#apartment-edit-template",
+    className: "apartmentDetail",
     events: {
       "click .store": "storeEdit",
       "click .close": "closeEdit"
@@ -43,38 +43,38 @@ MyApp.Subletting.AppartmentsList = function(){
       this.closeEdit();
     },
     closeEdit: function(){
-      var detailView = new AppartmentDetailView({model: this.model});
+      var detailView = new ApartmentDetailView({model: this.model});
       MyApp.Subletting.layout.details.show(detailView);
     }
 
   });
 
-  var AppartmentView = Backbone.Marionette.ItemView.extend({
-    template: "#appartment-template",
+  var ApartmentView = Backbone.Marionette.ItemView.extend({
+    template: "#apartment-template",
 
     events: {
       'click': 'showDetails'
     },
 
     showDetails: function(){
-      var detailView = new AppartmentDetailView({model: this.model});
+      var detailView = new ApartmentDetailView({model: this.model});
       MyApp.Subletting.layout.details.show(detailView);
     }
   });
 
-  var AppartmentListView = Backbone.Marionette.CompositeView.extend({
-    template: "#appartment-list-template",
-    id: "appartmentList",
-    itemView: AppartmentView,
+  var ApartmentListView = Backbone.Marionette.CompositeView.extend({
+    template: "#apartment-list-template",
+    id: "apartmentList",
+    itemView: ApartmentView,
 
     appendHtml: function(collectionView, itemView){
-      collectionView.$(".appartments").append(itemView.el);
+      collectionView.$(".apartments").append(itemView.el);
     }
   });
 
-  AL.showAppartments = function(appartments){
-    var appartmentListView = new AppartmentListView({ collection: appartments });
-    MyApp.Subletting.layout.appartments.show(appartmentListView);
+  AL.showApartments = function(apartments){
+    var apartmentListView = new ApartmentListView({ collection: apartments });
+    MyApp.Subletting.layout.apartments.show(apartmentListView);
   };
 
   return AL;
