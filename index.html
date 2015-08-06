@@ -3,12 +3,10 @@
 <head>
     <title>Apartments</title>
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-modal.css">
     <link href="http://fonts.googleapis.com/css?family=Sofia" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h1 class="title">Funky Apartments</h1>
-
+<h1 class="title">Manage Apartments</h1>
 <div id="content"></div>
 
 <!-- templates -->
@@ -63,7 +61,9 @@
     <div style="display:table;width:100%;height:100%;">
         <div class="imgApartment">
             <img src="assets/images/go-back-button.png" alt="" class="close" height="50" width="70"/>
-            <img src="<%=url%>" class="apartment-img"/>
+            <!--img src="<%=url%>" class="apartment-img"/-->
+            </br>
+            </br>
         </div>
         <div class="descApartment">
             <label>Name: </label>
@@ -72,7 +72,7 @@
             <input id="price_field" value="<%=price%>"><br>
                 <label>Description: </label>
             <textarea id="desc_field"><%=description%></textarea>
-            <label>Google link: </label><input id="url_field" value="<%=url%>" target="_blank">
+            <label>Image url: </label><input id="url_field" value="<%=url%>" target="_blank">
             <img src="assets/images/go-save-button.png" alt="" class="store" height="50" width="70"/>
         </div>
     </div>
@@ -85,7 +85,6 @@
 <script src="./assets/javascript/vendor/underscore.js"></script>
 <script src="./assets/javascript/vendor/backbone.js"></script>
 <script src="./assets/javascript/vendor/backbone.marionette.js"></script>
-<script src="./assets/javascript/vendor/bootstrap-modal.js"></script>
 
 
 <!-- Application core (Order matters) -->
