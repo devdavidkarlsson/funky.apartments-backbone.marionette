@@ -204,6 +204,21 @@ html, body {
     transform: rotate(-10deg);
 }
 
+.apartmentDetail .edit{
+ cursor: pointer;
+ position: absolute;
+ top: 64px;
+}
+
+.apartmentDetail .edit:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+}
+
+.apartmentDetail .edit:active{
+    transform: rotate(10deg);
+}
+
 .apartmentDetail .store{
    float: right;
     cursor: pointer;

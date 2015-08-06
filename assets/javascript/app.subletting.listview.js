@@ -7,6 +7,7 @@ MyApp.Subletting.ApartmentsList = function(){
     events:{
       'click .close': 'hideDetails',
       'click .descApartment': 'editDetails'
+      'click .edit': 'editDetails'
     },
 
     initialize: function(){
