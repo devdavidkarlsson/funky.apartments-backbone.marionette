@@ -1,6 +1,6 @@
 MyApp.Subletting.initializeLayout = function(){
 
-  var Layout = Backbone.Marionette.Layout.extend({
+  var Layout = Backbone.Marionette.LayoutView.extend({
     template: "#subletting-layout",
 
     regions: {

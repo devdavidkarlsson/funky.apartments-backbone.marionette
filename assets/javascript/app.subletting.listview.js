@@ -32,8 +32,8 @@ MyApp.Subletting.ApartmentsList = function(){
     storeEdit: function(){
       var priceNum = Number($('#price_field').val().replace(/\s/g, ''));
       //If not a number show an error.
-
       this.model.set({
+        id: this.model.attributes.id__,
         name:$('#name_field').val(),
         price:priceNum,
         description:$('#desc_field').val(),
@@ -65,10 +65,10 @@ MyApp.Subletting.ApartmentsList = function(){
   var ApartmentListView = Backbone.Marionette.CompositeView.extend({
     template: "#apartment-list-template",
     id: "apartmentList",
-    itemView: ApartmentView,
+    childView: ApartmentView,
 
-    appendHtml: function(collectionView, itemView){
-      collectionView.$(".apartments").append(itemView.el);
+    attachHtml: function(collectionView, childView){
+      collectionView.$(".apartments").append(childView.el);
     }
   });
 
