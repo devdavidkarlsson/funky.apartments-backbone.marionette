@@ -23,6 +23,8 @@ var Apartments = Backbone.Collection.extend({
               var ap = new Apartment(result.attributes);
               self.add(ap);
             });
+            // hide spinner
+            MyApp.vent.trigger('search:complete');
           }
       });
 
